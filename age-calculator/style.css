@@ -1,0 +1,70 @@
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #003049;
+    font-family: "Madimi One", sans-serif;;
+    overflow: hidden;
+}
+
+.title-con {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: 5%;
+    font-size: 24px;
+    color: #fdf0d5;
+}
+
+.main-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    margin-right: auto;
+    margin-left: auto;
+    flex-direction: row;
+    gap: 20px;
+
+}
+
+.age-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 5%;
+}
+
+#age-text {
+    color: #fdf0d5;
+    font-size: 24px;
+
+}
+
+.calculate-btn {
+    background-color: #8338ec;
+    border: 2px solid rgba(243, 197, 246, 0.874);
+    padding: 10px 30px;
+    border-radius: 12px;
+    color: white;
+}
+
+input {
+    background-color: #3a86ff;
+    color: white;
+    padding: 15px 45px;
+    border: none;
+    border-radius: 12px;
+
+}
+
+.calculate-btn:hover {
+    background-color: #be5bd6;
+    cursor: pointer;
+    border: 2px solid rgba(237, 203, 239, 0.874);
+}
