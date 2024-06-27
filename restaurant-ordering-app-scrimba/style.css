@@ -1,9 +1,9 @@
 .main {
     font-family: 'Smythe', sans-serif;
     width: 500px;
-    height: 800px;
+    height: 935px;
     margin: 0 auto;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(150, 150, 150);
 }
 
 .header {
@@ -45,7 +45,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 30px 0;
     border-bottom: 1px solid #ccc;
 }
 
@@ -80,7 +80,7 @@ button {
     background: none;
     border: none;
     cursor: pointer;
-    background-color: white;
-    border-radius: 100px;
-    padding: 20px;
+    background-color: #DEDEDE;
+    border-radius: 10px;
+    padding: 10px;
 }

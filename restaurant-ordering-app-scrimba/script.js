@@ -18,7 +18,7 @@ menuArray.forEach(meal => {
             </div>
         </div>
         <div>
-            <button><img src="assets/plus.png" alt="Add ${meal.name}"></button>
+            <button id="${meal.id}"><img src="assets/plus.png" alt="Add ${meal.name}"></button>
         </div>
     `;
 
