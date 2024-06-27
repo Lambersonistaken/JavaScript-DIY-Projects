@@ -1,0 +1,48 @@
+.main {
+    font-family: 'Smythe', sans-serif;
+    width: 500px;
+    height: 935px;
+    margin: 0 auto;
+    background-color: rgb(230, 230, 230);
+}
+
+.header {
+    font-family: 'Smythe', sans-serif;
+    width: 500px;
+    height: 150px;
+    background: url("./assets/header.png");
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: normal;
+    flex-direction: column;
+}
+
+.title-container {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+}
+
+.title-container p {
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.title-container h2 {
+    font-weight: 500;
+    font-size: 39px;
+    margin-bottom: 0;
+}
+
+.meal-item {
+    display: flex;
+    align-items: space-between;
+    justify-content: center;
+}
+
+.meal-content {
+    display: flex;
+}
