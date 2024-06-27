@@ -1,14 +1,14 @@
 .main {
     font-family: 'Smythe', sans-serif;
     width: 500px;
-    height: 935px;
+    height: 800px;
     margin: 0 auto;
     background-color: rgb(230, 230, 230);
 }
 
 .header {
     font-family: 'Smythe', sans-serif;
-    width: 500px;
+    width: 100%;
     height: 150px;
     background: url("./assets/header.png");
     display: flex;
@@ -37,12 +37,50 @@
     margin-bottom: 0;
 }
 
+.meal-container {
+    padding: 20px;
+}
+
 .meal-item {
     display: flex;
-    align-items: space-between;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
 }
 
 .meal-content {
     display: flex;
+    align-items: center;
+}
+
+.meal-content img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.meal-content div {
+    display: flex;
+    flex-direction: column;
+}
+
+.meal-content h4 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.meal-content p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 100px;
+    padding: 20px;
 }
