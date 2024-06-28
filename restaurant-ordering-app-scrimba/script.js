@@ -76,3 +76,23 @@ function updateTotal(amount) {
     total += amount;
     totalElement.textContent = total.toFixed(2);
 }
+
+
+const orderButton = document.getElementById('order-button');
+const modal = document.getElementsByClassName('modal');
+
+orderButton.addEventListener('click', () => {
+    modal[0].style.display = 'block';
+    const orderSummary = document.getElementById('order-summary');
+    orderSummary.innerHTML = '';
+    Object.values(orders).forEach(order => {
+        const orderItem = document.createElement('li');
+        orderItem.innerHTML = `
+            <p>${order.name} x ${order.quantity}</p>
+            <p>$${order.price * order.quantity}</p>
+        `;
+        orderSummary.appendChild(orderItem);
+    });
+    const totalElement = document.getElementById('modal-total');
+    totalElement.textContent = total.toFixed(2);
+});

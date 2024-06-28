@@ -3,8 +3,84 @@
     width: 500px;
     height: 1035px;
     margin: 0 auto;
-    background-color: rgb(247, 247, 247);
+    background-color: rgb(248, 248, 248);
     overflow: hidden;
+    position: relative;
+    /* Modal için */
+}
+
+.modal {
+    display: none;
+    /* Başlangıçta gizli */
+    position: fixed;
+    /* Sayfanın tamamını kaplamak için */
+    width: 500px;
+    height: 1035px;
+    background-color: rgba(0, 0, 0, 0.325);
+    justify-content: center;
+    /* İçeriği ortalamak için */
+    align-items: center;
+    /* İçeriği ortalamak için */
+    color: white;
+    /* İçeriğin görünür olması için */
+    z-index: 1000;
+    /* İçeriğin üstte olması için */
+}
+
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 250px;
+    background-color: rgb(255, 255, 255);
+}
+
+.card-container input {
+    width: 400px;
+    height: 70px;
+    border: 1px solid #ccc;
+}
+
+.card-container button {
+    width: 400px;
+    height: 70px;
+    background-color: #16DB99;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    border: 1px solid #16DB99;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.card-container button:hover {
+    background-color: #13a87d;
+}
+
+.card-container input::placeholder {
+    font-size: 24px;
+    font-weight: 500;
+    color: #ccc;
+    padding-left: 10px;
+}
+
+.card-container input:focus {
+    outline: none;
+}
+
+.card-container h3 {
+    font-size: 36px;
+    margin-bottom: 0;
+    color: black;
 }
 
 .header {
