@@ -3,7 +3,7 @@
     width: 500px;
     height: 1035px;
     margin: 0 auto;
-    background-color: rgb(150, 150, 150);
+    background-color: rgb(247, 247, 247);
     overflow: hidden;
 }
 
@@ -105,35 +105,29 @@ button {
 
 #order-list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    margin-left: 20px;
+    align-items: normal;
 }
 
 .your-order {
     display: flex;
     flex-direction: column;
-    align-items: space-between;
-    position: relative;
-    justify-content: space-between;
 }
 
 #order-list li {
-    position: absolute;
-    left: 120px;
+    position: relative;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
-    align-items: space-between;
-    gap: 100px;
+    align-items: center;
+    gap: 20px;
 }
 
-.order-content {
-    display: flex;
-    flex-direction: column;
-    align-items: space-between;
-    gap: 10px;
-    margin-left: 50px;
+
+button.remove {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
 }
