@@ -1,9 +1,10 @@
 .main {
     font-family: 'Smythe', sans-serif;
     width: 500px;
-    height: 935px;
+    height: 1035px;
     margin: 0 auto;
     background-color: rgb(150, 150, 150);
+    overflow: hidden;
 }
 
 .header {
@@ -83,4 +84,56 @@ button {
     background-color: #DEDEDE;
     border-radius: 10px;
     padding: 10px;
+}
+
+
+#order-button {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    background-color: #16DB99;
+    color: black;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 20px;
+    border-radius: 3px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#order-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.your-order {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    position: relative;
+    justify-content: space-between;
+}
+
+#order-list li {
+    position: absolute;
+    left: 120px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    gap: 100px;
+}
+
+.order-content {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    gap: 10px;
+    margin-left: 50px;
 }

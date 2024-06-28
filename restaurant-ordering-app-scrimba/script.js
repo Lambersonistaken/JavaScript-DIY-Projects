@@ -24,3 +24,19 @@ menuArray.forEach(meal => {
 
     mealContainer.appendChild(mealItem);
 });
+
+
+const orderList = document.getElementById('order-list');
+const orderPizza = document.getElementById('0');
+
+
+orderPizza.addEventListener('click', () => {
+    const pizzaOrder = document.createElement('li');
+    pizzaOrder.innerHTML = `
+        <p>Pizza</p>
+        <p>$14</p>
+    `;
+
+    orderList.appendChild(pizzaOrder);
+    
+});
