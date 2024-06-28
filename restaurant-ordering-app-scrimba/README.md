@@ -1,7 +1,3 @@
-Sure, here's a sample README file for your restaurant menu web application:
-
----
-
 # Jimmy's Diner Web Application for Scrimba
 
 ## Overview
@@ -90,5 +86,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - Made by İsmail Emir Lambacıoğlu for the Scrimba Frontend Developer Career Path course.
 
 ---
-
-You can replace the placeholder URLs and paths with the actual ones related to your project.
