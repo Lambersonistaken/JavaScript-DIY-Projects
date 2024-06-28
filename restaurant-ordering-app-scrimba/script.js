@@ -3,6 +3,11 @@ import { menuArray } from './data.js';
 const mealContainer = document.getElementById('meal-container');
 const orderList = document.getElementById('order-list');
 const totalElement = document.getElementById('total');
+const orderButton = document.getElementById('order-button');
+const orderModal = document.getElementsByClassName('modal')[0];
+const payButton = document.getElementById('pay-button');
+const paymentForm = document.getElementById('payment-form');
+const cardNumberInput = document.getElementById('card-number');
 let total = 0;
 const orders = {};
 
@@ -77,22 +82,44 @@ function updateTotal(amount) {
     totalElement.textContent = total.toFixed(2);
 }
 
-
-const orderButton = document.getElementById('order-button');
-const modal = document.getElementsByClassName('modal');
-
 orderButton.addEventListener('click', () => {
-    modal[0].style.display = 'block';
-    const orderSummary = document.getElementById('order-summary');
-    orderSummary.innerHTML = '';
-    Object.values(orders).forEach(order => {
-        const orderItem = document.createElement('li');
-        orderItem.innerHTML = `
-            <p>${order.name} x ${order.quantity}</p>
-            <p>$${order.price * order.quantity}</p>
-        `;
-        orderSummary.appendChild(orderItem);
-    });
-    const totalElement = document.getElementById('modal-total');
+    orderModal.style.display = 'block';
+});
+
+cardNumberInput.addEventListener('input', (event) => {
+    let value = event.target.value.replace(/\s+/g, '');
+    let formattedValue = value.replace(/(.{4})/g, '$1 ').trim();
+    event.target.value = formattedValue;
+});
+
+paymentForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const cardNumber = document.getElementById('card-number').value.trim().replace(/\s+/g, '');
+    const cvv = document.getElementById('cvv').value.trim();
+
+    if (!name || !cardNumber || !cvv) {
+        alert('Please fill out all fields');
+        return;
+    }
+
+    if (!/^\d{16}$/.test(cardNumber)) {
+        alert('Invalid card number');
+        return;
+    }
+
+    if (!/^\d{3}$/.test(cvv)) {
+        alert('Invalid CVV');
+        return;
+    }
+
+    orderModal.style.display = 'none';
+    orderList.innerHTML = '<li id="payment-success" style="background-color: #16DB99; padding: 30px; text-align: center; margin: 0 auto; font-size:24px; margin-top:50px; ">Your Payment Successful, please refresh the page!</li>';
+    total = 0;
     totalElement.textContent = total.toFixed(2);
+    for (let key in orders) delete orders[key];
+
+    orderButton.style.display = 'none';
+    document.querySelector('.total').style.display = 'none';
 });
